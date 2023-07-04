@@ -9,7 +9,12 @@ Repo for building a calculator GUI using customtkinter
 ## Project:
 
 * ### **GUI Calculator**
-Modern GUI simulating a calculator
+Modern GUI simulating a calculator.
+
+#### Installation
+```bash
+pip install customtkinter
+```
 
 <p align="center">
   <img src="Calc_Interface.png" width="400">
