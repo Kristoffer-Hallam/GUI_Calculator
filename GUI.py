@@ -6,9 +6,7 @@ from functools import partial
 # Modified from https://python-hub.com/calculator-app-in-python-customtkinter/
 class Calculator(CTk):
     # BUTTON TEXT
-    list_numbers = [['7', '8', '9'], ['4', '5', '6'], ['1', '2', '3'], ['0']]
-    list_buttons = [['AC', '+/-', '%', '÷'], ['7', '8', '9', 'X'], ['4', '5', '6', '-'],
-                    ['1', '2', '3', '+'], ['0', ',', '=']]
+    list_buttons = ['AC', '+/-', '%', '÷', 'X', '-', '+', '=', ',']
 
     def __init__(self):
         super().__init__()
@@ -94,43 +92,43 @@ class Calculator(CTk):
         # Operations Button Widgets attributes
         ## First Row
         self.op_button_1 = CTkButton(master=self, width=self.button_width, font=('Arial', 25),
-                                     text=Calculator.list_buttons[0][0], command=self.all_clear,
+                                     text=Calculator.list_buttons[0], command=self.all_clear,
                                      fg_color=GRAFFITE, text_color=WHITE)
         self.op_button_1.grid(row=1, column=0 + self.col, sticky=self.sticky, padx=3, pady=3)
         self.op_button_2 = CTkButton(master=self, width=self.button_width, font=('Arial', 25),
-                                     text=Calculator.list_buttons[0][1], command=partial(self.operate, '+/-'),
+                                     text=Calculator.list_buttons[1], command=partial(self.operate, '+/-'),
                                      fg_color=GRAFFITE, text_color=WHITE)
         self.op_button_2.grid(row=1, column=1 + self.col, sticky=self.sticky, padx=3, pady=3)
         self.op_button_3 = CTkButton(master=self, width=self.button_width, font=('Arial', 25),
-                                     text=Calculator.list_buttons[0][2], command=partial(self.operate, '%'),
+                                     text=Calculator.list_buttons[2], command=partial(self.operate, '%'),
                                      fg_color=GRAFFITE, text_color=WHITE)
         self.op_button_3.grid(row=1, column=2 + self.col, sticky=self.sticky, padx=3, pady=3)
         self.op_button_4 = CTkButton(master=self, width=self.button_width, font=('Arial', 25),
-                                     text=Calculator.list_buttons[0][3], command=partial(self.operate, '÷'),
+                                     text=Calculator.list_buttons[3], command=partial(self.operate, '÷'),
                                      fg_color=ORANGE, text_color=BLACK)
         self.op_button_4.grid(row=1, column=3 + self.col, sticky=self.sticky, padx=3, pady=3)
 
         ## Last Column
         self.op_button_5 = CTkButton(master=self, width=self.button_width, font=('Arial', 25),
-                                     text=Calculator.list_buttons[1][3], command=partial(self.operate, 'X'),
+                                     text=Calculator.list_buttons[4], command=partial(self.operate, 'X'),
                                      fg_color=ORANGE, text_color=BLACK)
         self.op_button_5.grid(row=2, column=3 + self.col, sticky=self.sticky, padx=3, pady=3)
         self.op_button_6 = CTkButton(master=self, width=self.button_width, font=('Arial', 25),
-                                     text=Calculator.list_buttons[2][3], command=partial(self.operate, '-'),
+                                     text=Calculator.list_buttons[5], command=partial(self.operate, '-'),
                                      fg_color=ORANGE, text_color=BLACK)
         self.op_button_6.grid(row=3, column=3 + self.col, sticky=self.sticky, padx=3, pady=3)
         self.op_button_7 = CTkButton(master=self, width=self.button_width, font=('Arial', 25),
-                                     text=Calculator.list_buttons[3][3], command=partial(self.operate, '+'),
+                                     text=Calculator.list_buttons[6], command=partial(self.operate, '+'),
                                      fg_color=ORANGE, text_color=BLACK)
         self.op_button_7.grid(row=4, column=3 + self.col, sticky=self.sticky, padx=3, pady=3)
         self.op_button_8 = CTkButton(master=self, width=self.button_width, font=('Arial', 25),
-                                     text=Calculator.list_buttons[4][2], command=self.evaluate,
+                                     text=Calculator.list_buttons[7], command=self.evaluate,
                                      fg_color=ORANGE, text_color=BLACK)
         self.op_button_8.grid(row=5, column=3 + self.col, sticky=self.sticky, padx=3, pady=3)
 
         ## Comma Button
         self.op_button_9 = CTkButton(master=self, width=self.button_width, font=('Arial', 25),
-                                     text=Calculator.list_buttons[4][1], command=self.comma,
+                                     text=Calculator.list_buttons[8], command=self.comma,
                                      fg_color=GRAY, text_color=WHITE)
         self.op_button_9.grid(row=5, column=2 + self.col, sticky=self.sticky, padx=3, pady=3)
 
