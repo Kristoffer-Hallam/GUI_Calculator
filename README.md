@@ -16,6 +16,8 @@ Modern GUI simulating a calculator.
 pip install customtkinter
 ```
 
+For more information on customtkinter module, please visit [CustomTkinter Documentation](https://customtkinter.tomschimansky.com/documentation/).
+
 <p align="center">
   <img src="Calc_Interface.png" width="400">
 </p>
