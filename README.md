@@ -18,6 +18,8 @@ pip install customtkinter
 
 For more information on customtkinter module, please visit [CustomTkinter Documentation](https://customtkinter.tomschimansky.com/documentation/).
 
+Executing the python file, one gets the GUI seen below.
+
 <p align="center">
   <img src="Calc_Interface.png" width="400">
 </p>
